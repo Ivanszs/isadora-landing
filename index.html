@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Isadora Mexican Cuisine – Ready-to-eat authentic Mexican food. Fully cooked, no refrigeration needed." />
+    <title>Isadora Mexican Cuisine | México Is Just 2 Minutes Away</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header id="site-header" role="banner">
+      <div class="header-inner">
+        <a href="#" aria-label="Isadora Home">
+          <img src="images folder/logo 4.svg" alt="Isadora Mexican Cuisine" width="140" height="48" />
+        </a>
+        <div class="header-controls">
+          <button id="btn-dark-mode" aria-label="Toggle dark mode">
+            <img src="images folder/dark-theme-svgrepo-com 1.svg" alt="" aria-hidden="true" width="28" height="28" />
+          </button>
+          <button id="btn-lang" aria-label="Switch language">
+            <span>EN</span><span class="separator">/</span><span>ES</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="section-hero" class="section-hero">
+        <div class="hero-inner">
+          <h1 class="hero-heading">
+            <span class="hero-mexico">México</span><span class="hero-is-just">IS JUST</span>
+            <br>
+            <span class="hero-minutes">2 MINUTES AWAY</span>
+          </h1>
+          <div class="hero-products">
+            <div class="product-col product-col--left" id="product-col-1">
+              <img src="images folder/Mole_15oz.svg" alt="Isadora Mole 15oz" class="product-img" loading="eager" />
+            </div>
+            <div class="product-col product-col--center" id="product-col-2">
+              <img src="images folder/Barbacoa_15oz.svg" alt="Isadora Barbacoa 15oz" class="product-img" loading="eager" />
+            </div>
+            <div class="product-col product-col--right" id="product-col-3">
+              <img src="images folder/Cerdo_15oz.svg" alt="Isadora Cerdo Chile Verde 15oz" class="product-img" loading="eager" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-stats" class="section-stats">
+        <div class="stats-intro">
+          <p class="stats-intro-text"
+            data-en="<strong>Isadora<sup>®</sup></strong>, the #1 Brand of beans in a pouch that has revolutionized the demanding taste of <strong>thousands of Mexicans,</strong> is <strong>now introducing</strong> in the United States a complete portfolio of <strong>ready-to-eat</strong> Mexican Food, a solution to consumers looking for tasty, unique Mexican flavors and convenience products that are <strong>FULLY COOKED &amp; DON'T NEED REFRIGERATION.</strong>"
+            data-es="<strong>Isadora<sup>®</sup></strong>, la marca #1 de frijoles en bolsa que ha revolucionado el exigente gusto de miles de mexicanos, presenta ahora en Estados Unidos un portafolio completo de comida mexicana lista para comer, una solución para los consumidores que buscan sabores mexicanos únicos y sabrosos, y productos convenientes que están <strong>COMPLETAMENTE COCINADOS Y NO NECESITAN REFRIGERACIÓN.</strong>">
+            <strong>Isadora<sup>®</sup></strong>, the #1 Brand of beans in a pouch that has revolutionized the demanding taste of <strong>thousands of Mexicans,</strong> is <strong>now introducing</strong> in the United States a complete portfolio of <strong>ready-to-eat</strong> Mexican Food, a solution to consumers looking for tasty, unique Mexican flavors and convenience products that are <strong>FULLY COOKED &amp; DON'T NEED REFRIGERATION.</strong>
+          </p>
+        </div>
+
+        <div class="stats-trend">
+          <div class="stats-trend-text">
+            <h2 class="stats-trend-heading"
+              data-en="MEXICAN CUISINE LEADING TREND IN THE U.S"
+              data-es="LA COCINA MEXICANA LIDERA LA TENDENCIA EN EE. UU.">
+              MEXICAN CUISINE LEADING TREND IN THE U.S
+            </h2>
+            <p class="stats-trend-sub"
+              data-en="<strong>Mexican cuisine reigns</strong> as the most popular ethnic cuisine in <strong>27 states.</strong>"
+              data-es="<strong>La cocina mexicana</strong> se posiciona como la cocina étnica más popular en <strong>27 estados.</strong>">
+              <strong>Mexican cuisine reigns</strong> as the most popular ethnic cuisine in <strong>27 states.</strong>
+            </p>
+          </div>
+
+          <figure class="stats-map">
+            <img src="images folder/Group (1).svg" alt="US map showing Mexican cuisine dominance" class="map-img" loading="lazy" />
+            <figcaption class="map-legend">
+              <ul class="legend-list">
+                <li class="legend-item legend-thai"><span class="legend-dot"></span><span>Thai</span></li>
+                <li class="legend-item legend-chinese"><span class="legend-dot"></span><span>Chinese</span></li>
+                <li class="legend-item legend-mexican"><span class="legend-dot"></span><span>Mexican</span></li>
+              </ul>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="stats-bag-row">
+          <figure class="bag-wrapper" id="bag-wrapper">
+            <img src="images folder/SOBRE 58%.svg" alt="" aria-hidden="true" class="bag-svg" id="bag-svg" />
+            <div class="bag-text" id="bag-text">
+              <span class="bag-percent">58%</span>
+              <span class="bag-label"
+                data-en="OF PEOPLE<br>EAT PACKAGED<br>HOMEMADE<br>STEWS"
+                data-es="DE LAS PERSONAS<br>COMEN GUISOS<br>CASEROS<br>EMPACADOS">
+                OF PEOPLE<br>EAT PACKAGED<br>HOMEMADE<br>STEWS
+              </span>
+            </div>
+            <figcaption class="bag-caption"
+              data-en="TO SAVE TIME COOKING"
+              data-es="PARA AHORRAR TIEMPO COCINANDO">
+              TO SAVE TIME COOKING
+            </figcaption>
+          </figure>
+
+          <div class="stats-numbers">
+            <div class="stat-item" id="stat-item-1">
+              <img src="images folder/icono 2 2.svg" alt="" aria-hidden="true" class="stat-icon" />
+              <p class="stat-text">
+                <strong class="stat-percent">56%</strong>
+                <span data-en="WEEKDAYS<br>AT DINNERTIME" data-es="ENTRE SEMANA<br>A LA HORA DE LA CENA">WEEKDAYS<br>AT DINNERTIME</span>
+              </p>
+            </div>
+            <div class="stat-item" id="stat-item-2">
+              <img src="images folder/Icono 1 1.svg" alt="" aria-hidden="true" class="stat-icon" />
+              <p class="stat-text">
+                <strong class="stat-percent">40%</strong>
+                <span data-en="ON THE<br>WEEKEND" data-es="EL FIN<br>DE SEMANA">ON THE<br>WEEKEND</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-quality" class="section-quality">
+        <div class="quality-logo">
+          <img src="images folder/logo 4.svg" alt="Isadora Mexican Cuisine" width="160" height="56" />
+        </div>
+
+        <div class="parallax-layer" aria-hidden="true">
+          <img src="images folder/plato 1.svg" alt="" class="parallax-item parallax-plato-1" id="parallax-plato-1" />
+          <img src="images folder/plato 2.svg" alt="" class="parallax-item parallax-plato-2" id="parallax-plato-2" />
+          <img src="images folder/plato 3.svg" alt="" class="parallax-item parallax-plato-3" id="parallax-plato-3" />
+          <img src="images folder/IsadoraGuisos_Frase2023.svg" alt="" class="parallax-item parallax-frase" id="parallax-frase" />
+        </div>
+
+        <div class="quality-content">
+          <img src="images folder/PRODUDLY 1.svg" alt="Proudly Made in Mexico" class="quality-badge" />
+
+          <h2 id="quality-heading" class="sr-only">Quality Ingredients</h2>
+          <p class="quality-text"
+            data-en="We use the highest <strong>QUALITY INGREDIENTS FROM MÉXICO</strong> in every pouch to cook <strong>THE TASTIEST, FRESHLY MADE MEXICAN FOOD WITHOUT PRESERVATIVES</strong> thanks to our <strong>MULTI-LAYERED BPA-FREE POUCH</strong> that ensure superior safety and <strong>FRESHNESS FOR UP TO 18 MONTHS.</strong>"
+            data-es="Utilizamos ingredientes de la más alta <strong>CALIDAD DE MÉXICO</strong> en cada bolsa para cocinar <strong>LA COMIDA MEXICANA MÁS SABROSA Y FRESCA SIN CONSERVANTES</strong>, gracias a nuestra <strong>BOLSA MULTICAPA SIN BPA</strong> que garantiza una seguridad superior y <strong>FRESCURA HASTA POR 18 MESES.</strong>">
+            We use the highest <strong>QUALITY INGREDIENTS FROM MÉXICO</strong> in every pouch to cook <strong>THE TASTIEST, FRESHLY MADE MEXICAN FOOD WITHOUT PRESERVATIVES</strong> thanks to our <strong>MULTI-LAYERED BPA-FREE POUCH</strong> that ensure superior safety and <strong>FRESHNESS FOR UP TO 18 MONTHS.</strong>
+          </p>
+
+          <ul class="quality-features" aria-label="Product features">
+            <li class="feature-item">
+              <img src="images folder/Group.svg" alt="" aria-hidden="true" class="feature-icon" />
+              <span>DOESN'T NEED<br>REFRIGERATION</span>
+            </li>
+            <li class="feature-item">
+              <img src="images folder/Group 1.svg" alt="" aria-hidden="true" class="feature-icon" />
+              <span>MADE WITH<br>100% BEEF,<br>PORK &amp; CHICKEN</span>
+            </li>
+            <li class="feature-item">
+              <img src="images folder/Group (2).svg" alt="" aria-hidden="true" class="feature-icon" />
+              <span>HEAT &amp; SERVE<br>2 MINUTES</span>
+            </li>
+            <li class="feature-item">
+              <img src="images folder/Group (3).svg" alt="" aria-hidden="true" class="feature-icon" />
+              <span>GLUTEN<br>FREE</span>
+            </li>
+            <li class="feature-item">
+              <img src="images folder/Group (4).svg" alt="" aria-hidden="true" class="feature-icon" />
+              <span>FULLY<br>COOKED</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
