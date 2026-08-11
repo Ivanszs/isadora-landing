@@ -64,6 +64,10 @@
    --header-border: #E57200;
 }
 
+html.lang-loading body {
+   opacity: 0;
+}
+
 *,
 *::before,
 *::after {
