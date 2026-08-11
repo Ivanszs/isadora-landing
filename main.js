@@ -10,11 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
       htmlEl.setAttribute('data-theme', newTheme);
       localStorage.setItem('isadora-theme', newTheme);
     });
-
-    const savedTheme = localStorage.getItem('isadora-theme');
-    if (savedTheme) {
-      htmlEl.setAttribute('data-theme', savedTheme);
-    }
   }
 
   const btnLang = document.getElementById('btn-lang');

@@ -7,6 +7,10 @@
   <meta name="description"
     content="Isadora Mexican Cuisine – Ready-to-eat authentic Mexican food. Fully cooked, no refrigeration needed." />
   <title>Isadora Mexican Cuisine | México Is Just 2 Minutes Away</title>
+  <script>
+    const t = localStorage.getItem('isadora-theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <link rel="stylesheet" href="style.css" />
