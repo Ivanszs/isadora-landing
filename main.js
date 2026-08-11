@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setLanguage(currentLang === 'en' ? 'es' : 'en');
     });
     setLanguage(localStorage.getItem('isadora-lang') || 'en');
-    htmlEl.classList.remove('page-loading');
+    htmlEl.classList.remove('lang-loading');
   } else {
     setupPouchSplitText();
   }

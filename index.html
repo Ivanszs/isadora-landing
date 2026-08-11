@@ -8,15 +8,20 @@
     content="Isadora Mexican Cuisine – Ready-to-eat authentic Mexican food. Fully cooked, no refrigeration needed." />
   <title>Isadora Mexican Cuisine | México Is Just 2 Minutes Away</title>
   <script>
-    document.documentElement.classList.add('page-loading');
     const t = localStorage.getItem('isadora-theme');
     if (t) document.documentElement.setAttribute('data-theme', t);
     const l = localStorage.getItem('isadora-lang');
     if (l) {
       document.documentElement.setAttribute('data-lang', l);
       document.documentElement.setAttribute('lang', l);
+      if (l !== 'en') document.documentElement.classList.add('lang-loading');
     }
   </script>
+  <link rel="preload" href="fonts/Gotham-Black.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="fonts/Gotham-Bold.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="fonts/Gotham-Regular.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="fonts/Acumin-SemiCondensed.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="fonts/Acumin-SemiCondensed-Bold.otf" as="font" type="font/otf" crossorigin />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <link rel="stylesheet" href="style.css" />
