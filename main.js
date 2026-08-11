@@ -20,8 +20,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnLang = document.getElementById('btn-lang');
   let currentLang = 'en';
 
+  function createSplitText(element) {
+    if (!element) return;
+    const text = element.textContent.trim();
+    element.innerHTML = '';
+    const words = text.split(' ');
+
+    words.forEach((wordText, wIdx) => {
+      const wordSpan = document.createElement('span');
+      wordSpan.className = 'split-word';
+
+      Array.from(wordText).forEach((char) => {
+        const charSpan = document.createElement('span');
+        charSpan.className = 'split-char';
+        charSpan.textContent = char;
+        wordSpan.appendChild(charSpan);
+      });
+
+      element.appendChild(wordSpan);
+      if (wIdx < words.length - 1) {
+        const space = document.createTextNode(' ');
+        element.appendChild(space);
+      }
+    });
+  }
+
+  function setupPouchSplitText() {
+    document.querySelectorAll('#pouch-text-overlay .split-text').forEach(el => {
+      createSplitText(el);
+    });
+  }
+
   function setLanguage(lang) {
     currentLang = lang;
+    htmlEl.setAttribute('data-lang', lang);
     const translatableElements = document.querySelectorAll('[data-en][data-es]');
 
     translatableElements.forEach(el => {
@@ -30,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
         el.innerHTML = translation;
       }
     });
+
+    setupPouchSplitText();
 
     if (btnLang) {
       const spans = btnLang.querySelectorAll('span:not(.separator)');
@@ -47,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
       setLanguage(currentLang === 'en' ? 'es' : 'en');
     });
     setLanguage('en');
+  } else {
+    setupPouchSplitText();
   }
 
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -117,28 +153,45 @@ document.addEventListener('DOMContentLoaded', () => {
     bagTimeline
       .from('.bag-wrapper', {
         opacity: 0,
-        x: -100,
-        duration: 1,
+        x: -80,
+        duration: 0.8,
         ease: 'power2.out'
       })
       .from('.stats-numbers', {
         opacity: 0,
-        x: 100,
-        duration: 1,
+        x: 80,
+        duration: 0.8,
         ease: 'power2.out'
       }, '<')
       .from('#bag-svg', {
-        scale: 0.92,
+        scale: 0.94,
+        duration: 0.5,
+        ease: 'back.out(1.4)'
+      }, '-=0.2')
+      .from('#pouch-num .split-char', {
+        opacity: 0,
+        scale: 0,
+        y: -30,
+        rotate: -15,
+        stagger: 0.08,
         duration: 0.6,
-        ease: 'elastic.out(1, 0.5)'
-      }, '+=0.1')
+        ease: 'back.out(2)'
+      }, '-=0.3')
+      .from('#pouch-body .split-char', {
+        opacity: 0,
+        y: 25,
+        rotateX: -90,
+        stagger: 0.02,
+        duration: 0.5,
+        ease: 'back.out(1.5)'
+      }, '-=0.4')
       .from('.stat-item', {
         opacity: 0,
         y: 20,
         stagger: 0.2,
         duration: 0.6,
         ease: 'power2.out'
-      }, '-=0.3');
+      }, '-=0.4');
 
 
     gsap.to('#parallax-plato-1', {
