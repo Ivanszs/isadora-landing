@@ -53,15 +53,16 @@
 }
 
 [data-theme="dark"] {
-   --cream: #0D0B08;
+   --cream: #14100D;
    --text-dark: #FFFFFF;
-   --text-mid: #F0E6D8;
-   --orange: #E57200;
-   --paper-overlay: rgba(13, 11, 8, 0.92);
-   --hero-bg: #1A0B02;
-   --quality-bg: #160802;
-   --header-bg: #120802;
-   --header-border: #E57200;
+   --text-mid: #E8D9C5;
+   --orange: #FF8A00;
+   --orange-dark: #E07000;
+   --paper-overlay: rgba(20, 16, 13, 0.85);
+   --hero-bg: #4d2007;
+   --quality-bg: #240E03;
+   --header-bg: #1E0D03;
+   --header-border: #FF8A00;
 }
 
 html.lang-loading body {
