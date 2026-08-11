@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function setLanguage(lang) {
     currentLang = lang;
     htmlEl.setAttribute('data-lang', lang);
+    htmlEl.setAttribute('lang', lang);
+    localStorage.setItem('isadora-lang', lang);
     const translatableElements = document.querySelectorAll('[data-en][data-es]');
 
     translatableElements.forEach(el => {
@@ -75,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnLang.addEventListener('click', () => {
       setLanguage(currentLang === 'en' ? 'es' : 'en');
     });
-    setLanguage('en');
+    setLanguage(localStorage.getItem('isadora-lang') || 'en');
   } else {
     setupPouchSplitText();
   }

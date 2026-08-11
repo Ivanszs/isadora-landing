@@ -10,6 +10,11 @@
   <script>
     const t = localStorage.getItem('isadora-theme');
     if (t) document.documentElement.setAttribute('data-theme', t);
+    const l = localStorage.getItem('isadora-lang');
+    if (l) {
+      document.documentElement.setAttribute('data-lang', l);
+      document.documentElement.setAttribute('lang', l);
+    }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
