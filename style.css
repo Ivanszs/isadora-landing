@@ -64,7 +64,7 @@
    --header-border: #E57200;
 }
 
-html.lang-loading body {
+html.page-loading body {
    opacity: 0;
 }
 

@@ -8,13 +8,13 @@
     content="Isadora Mexican Cuisine – Ready-to-eat authentic Mexican food. Fully cooked, no refrigeration needed." />
   <title>Isadora Mexican Cuisine | México Is Just 2 Minutes Away</title>
   <script>
+    document.documentElement.classList.add('page-loading');
     const t = localStorage.getItem('isadora-theme');
     if (t) document.documentElement.setAttribute('data-theme', t);
     const l = localStorage.getItem('isadora-lang');
     if (l) {
       document.documentElement.setAttribute('data-lang', l);
       document.documentElement.setAttribute('lang', l);
-      if (l !== 'en') document.documentElement.classList.add('lang-loading');
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
@@ -44,20 +44,20 @@
     <section id="section-hero" class="section-hero">
       <div class="hero-inner">
         <h1 class="hero-heading">
-          <img src="images-folder/IsadoraGuisos_Frase2023.svg" alt="México Is Just 2 Minutes Away" class="hero-frase" />
+          <img src="images-folder/IsadoraGuisos_Frase2023.svg" alt="México Is Just 2 Minutes Away" class="hero-frase" width="480" height="176" />
         </h1>
 
         <div class="hero-products">
           <div class="product-col product-col--left" id="product-col-1">
-            <img src="images-folder/Mole_15oz.svg" alt="Isadora Mole 15oz" class="product-img" loading="eager" />
+            <img src="images-folder/Mole_15oz.svg" alt="Isadora Mole 15oz" class="product-img" loading="eager" width="210" height="283" />
           </div>
           <div class="product-col product-col--center" id="product-col-2">
             <img src="images-folder/Barbacoa_15oz.svg" alt="Isadora Barbacoa 15oz" class="product-img"
-              loading="eager" />
+              loading="eager" width="247" height="334" />
           </div>
           <div class="product-col product-col--right" id="product-col-3">
             <img src="images-folder/Cerdo_15oz.svg" alt="Isadora Cerdo Chile Verde 15oz" class="product-img"
-              loading="eager" />
+              loading="eager" width="210" height="283" />
           </div>
         </div>
       </div>
@@ -91,14 +91,14 @@
 
         <figure class="stats-map">
           <img src="images-folder/Group-1-map.svg" alt="US map showing Mexican cuisine dominance" class="map-img"
-            loading="lazy" />
+            loading="lazy" width="430" height="355" />
         </figure>
       </div>
 
       <div class="stats-bag-row">
         <figure class="bag-wrapper" id="bag-wrapper">
           <img src="images-folder/SOBRE-58.svg" alt="58% of people eat packaged homemade stews to save time cooking"
-            class="bag-svg" id="bag-svg" />
+            class="bag-svg" id="bag-svg" width="292" height="406" />
           <div class="pouch-text-overlay" id="pouch-text-overlay" aria-label="58% of people eat packaged homemade stews">
             <div class="pouch-text-num split-text" id="pouch-num">58%</div>
             <div class="pouch-text-body" id="pouch-body"
@@ -114,7 +114,7 @@
 
         <div class="stats-numbers">
           <div class="stat-item" id="stat-item-1">
-            <img src="images-folder/Icono-1-1.svg" alt="" aria-hidden="true" class="stat-icon" />
+            <img src="images-folder/Icono-1-1.svg" alt="" aria-hidden="true" class="stat-icon" width="102" height="150" />
             <p class="stat-text">
               <strong class="stat-percent">56%</strong>
               <span data-en="WEEKDAYS<br>AT DINNERTIME" data-es="ENTRE SEMANA<br>A LA HORA DE LA CENA">WEEKDAYS<br>AT
@@ -122,7 +122,7 @@
             </p>
           </div>
           <div class="stat-item" id="stat-item-2">
-            <img src="images-folder/icono-2-2.svg" alt="" aria-hidden="true" class="stat-icon" />
+            <img src="images-folder/icono-2-2.svg" alt="" aria-hidden="true" class="stat-icon" width="102" height="100" />
             <p class="stat-text">
               <strong class="stat-percent">40%</strong>
               <span data-en="ON THE<br>WEEKEND" data-es="EL FIN<br>DE SEMANA">ON THE<br>WEEKEND</span>
@@ -138,13 +138,13 @@
       </div>
 
       <div class="parallax-layer" aria-hidden="true">
-        <img src="images-folder/plato-1.svg" alt="" class="parallax-item parallax-plato-1" id="parallax-plato-1" />
-        <img src="images-folder/plato-2.svg" alt="" class="parallax-item parallax-plato-2" id="parallax-plato-2" />
-        <img src="images-folder/plato-3.svg" alt="" class="parallax-item parallax-plato-3" id="parallax-plato-3" />
+        <img src="images-folder/plato-1.svg" alt="" class="parallax-item parallax-plato-1" id="parallax-plato-1" width="310" height="456" />
+        <img src="images-folder/plato-2.svg" alt="" class="parallax-item parallax-plato-2" id="parallax-plato-2" width="320" height="301" />
+        <img src="images-folder/plato-3.svg" alt="" class="parallax-item parallax-plato-3" id="parallax-plato-3" width="320" height="239" />
       </div>
 
       <div class="quality-content">
-        <img src="images-folder/PRODUDLY-1.svg" alt="Proudly Made in Mexico" class="quality-badge" />
+        <img src="images-folder/PRODUDLY-1.svg" alt="Proudly Made in Mexico" class="quality-badge" width="98" height="128" />
 
         <h2 id="quality-heading" class="sr-only">Quality Ingredients</h2>
         <p class="quality-text"
@@ -157,19 +157,19 @@
 
         <ul class="quality-features" aria-label="Product features">
           <li class="feature-item">
-            <img src="images-folder/Group.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--1" />
+            <img src="images-folder/Group.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--1" width="106" height="102" />
           </li>
           <li class="feature-item">
-            <img src="images-folder/Group-1.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--2" />
+            <img src="images-folder/Group-1.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--2" width="84" height="106" />
           </li>
           <li class="feature-item">
-            <img src="images-folder/Group-2.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--3" />
+            <img src="images-folder/Group-2.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--3" width="94" height="104" />
           </li>
           <li class="feature-item">
-            <img src="images-folder/Group-3.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--4" />
+            <img src="images-folder/Group-3.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--4" width="65" height="104" />
           </li>
           <li class="feature-item">
-            <img src="images-folder/Group-4.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--5" />
+            <img src="images-folder/Group-4.svg" alt="" aria-hidden="true" class="feature-icon feature-icon--5" width="69" height="104" />
           </li>
         </ul>
 
